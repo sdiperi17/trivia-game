@@ -10,9 +10,13 @@
 
 <body>
     <form action="/play" method="POST">
-        <select>Select Game Category
-            <option name="game-category" type="data">
-        </select>
+        <label>Select
+            <select name="gameCategory">
+                <option disabled>Game Category</option>
+                <option value="9">General knowledge</option>
+                <option value="10">Entertainment: Books</option>
+            </select>
+        </label>
         <label>Select Number of Questions
             <input name="amountOfQuestions" type="number">
         </label>
