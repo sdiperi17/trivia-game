@@ -9,7 +9,19 @@
 </head>
 
 <body>
+    <form action="/play" method="POST">
+        <select>Select Game Category
+            <option name="game-category" type="data">
+        </select>
+        <label>Select Number of Questions
+            <input name="amountOfQuestions" type="number">
+        </label>
+        <button id="play-btn" type="submit">Play</button>
+    </form>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
