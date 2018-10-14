@@ -30,11 +30,13 @@ app.get("/play", (req, res) => {
 app.post("/play", (req, res) => {
     var questionsAmount = req.body.amountOfQuestions;
     var questionCategory = req.body.gameCategory;
+    var difficulty = req.body.gameDifficulty;
+    var questionType = req.body.questionType;
     console.log(questionCategory);
 
     axios
         .get(
-            `https://opentdb.com/api.php?amount=${questionsAmount}&category=${questionCategory}`
+            `https://opentdb.com/api.php?amount=${questionsAmount}&category=${questionCategory}&difficulty=${difficulty}&type=multiple`
         )
 
         .then(function(data) {
