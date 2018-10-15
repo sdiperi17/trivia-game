@@ -149,6 +149,27 @@ header {
     background-size: cover;
 }
 
+.play-board {
+    background-color: rgba(0, 8, 102, 0.3);
+    width: 70vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-page-background {
+    background-color: white;
+    /* background-image: url("../public/images/playBackgr.jpg"); */
+    /* width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed; */
+}
+
 .box-select {
     background-color: rgba(191, 63, 78, 0.6);
     width: 60vw;
@@ -183,4 +204,31 @@ header {
 
 .box-shadow {
     box-shadow: 5px 5px 5px black;
+}
+
+div button {
+    /* border: 3px double greenyellow; */
+    box-shadow: 5px 5px 5px black;
+    width: 180px;
+    height: 50px;
+    margin: 5px 5px 30px 5px;
+    border: solid 3px;
+    /* the border will curve into a 'D' */
+    border-radius: 40px 10px;
+}
+
+.box-question {
+    background-color: white;
+    font-size: 20px;
+    width: 60vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px black;
+    border: groove 1em red;
+    border-radius: 2em;
+}
+
+.box1 {
+    margin-top: 150px;
 }

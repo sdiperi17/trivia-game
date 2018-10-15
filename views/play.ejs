@@ -6,33 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../public/style.css">
 </head>
 
-<body>
-    <!-- data=result array, item is each object in the result array, with forEach loop we don't need have to use index to access objects -->
-    <!-- java script code has to be in <% %> -->
-    <% data.forEach(item => { %>
-        <div>
-            <h3>
-                <%- item.question %>
+<body class="play-page-background ">
+    <div>
+        <div class="play-board">
+            <div class="box1">
+                <!-- data=result array, item is each object in the result array, with forEach loop we don't need have to use index to access objects -->
+                <!-- java script code has to be in <% %> -->
+                <% data.forEach(item => { %>
+                    <h3 class="box-question">
+                        <%- item.question %>
 
-            </h3>
-            <div>
-                <button>
-                    <%- item.incorrect_answers[0] %>
-                </button>
-                <button>
-                    <%- item.incorrect_answers[1] %>
-                </button>
-                <button>
-                    <%- item.incorrect_answers[2] %>
-                </button>
-                <button>
-                    <%- item.correct_answer %>
-                </button>
+                    </h3>
+                    <div>
+                        <button class="answer-btn">
+                            A.
+                            <%- item.incorrect_answers[0] %>
+                        </button>
+                        <button class="answer-btn">
+                            B.
+                            <%- item.incorrect_answers[1] %>
+                        </button>
+                        <button>
+                            C.
+                            <%- item.incorrect_answers[2] %>
+                        </button>
+                        <button>
+                            D.
+                            <%- item.correct_answer %>
+                        </button>
+                    </div>
+
+                    <%}) %>
             </div>
         </div>
-        <%}) %>
+    </div>
 </body>
 
 </html>
