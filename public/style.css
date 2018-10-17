@@ -159,6 +159,8 @@ header {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    margin-top: 50px;
+    padding-bottom: 100px;
 }
 
 .play-page-background {
@@ -238,4 +240,9 @@ div button {
 .box1 .active {
     background-color: blue;
     color: white;
+}
+
+#result-btn {
+    border-radius: 20px;
+    background: green;
 }

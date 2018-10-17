@@ -47,3 +47,16 @@ app.post("/play", (req, res) => {
             });
         });
 });
+
+app.get("/score", (req, res) => {
+    res.render("score");
+});
+
+app.post("/score", (req, res) => {
+    req.body.scoreInput;
+
+    // console.log(points);
+    res.render("score", {
+        points: req.body.scoreInput
+    });
+});

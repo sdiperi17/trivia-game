@@ -16,7 +16,7 @@
                 <!-- data=result array, item is each object in the result array, with forEach loop we don't need have to use index to access objects -->
                 <!-- java script code has to be in <% %> -->
                 <% data.forEach( (item, index) => { %>
-                    <h3 class="box-question ">
+                    <h3 class="box-question">
                         <%- item.question %>
 
                     </h3>
@@ -41,6 +41,10 @@
 
                     <%}) %>
             </div>
+            <form action="/score" method="POST">
+                <input id="points" type="hidden" name="scoreInput">
+                <button class="getResults" type="submit"> GET RESULTS</button>
+            </form>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
