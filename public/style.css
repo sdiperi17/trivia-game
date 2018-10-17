@@ -150,27 +150,23 @@ header {
 }
 
 .play-board {
-    background-color: rgba(0, 8, 102, 0.3);
+    background-color: rgba(360, 100, 100, 0.4);
     width: 70vw;
     min-height: 100vh;
     position: absolute;
-    top: 50%;
     left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     text-align: center;
-    margin-top: 50px;
-    padding-bottom: 100px;
 }
 
 .play-page-background {
     background-color: white;
-    /* background-image: url("../public/images/playBackgr.jpg"); */
-    /* width: 100vw;
+    background-image: url("../public/images/123.jpg");
+    width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    position: fixed; */
+    position: fixed;
 }
 
 .box-select {
@@ -217,7 +213,7 @@ div button {
     margin: 5px 5px 30px 5px;
     border: solid 3px;
     /* the border will curve into a 'D' */
-    border-radius: 40px 10px;
+    border-radius: 10px;
 }
 
 .box-question {
@@ -234,7 +230,6 @@ div button {
 }
 
 .box1 {
-    margin-top: 400px;
 }
 
 .box1 .active {
