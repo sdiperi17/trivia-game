@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // set view engine to ejs
 app.set("view engine", "ejs");
-
-var server = app.listen(3000, () => {
-    console.log("server is running");
+var port = process.env.PORT || 3000;
+var server = app.listen(port, () => {
+    console.log(`server is running ${port}`);
 });
 
 app.get("/", (req, res) => {
