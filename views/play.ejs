@@ -21,29 +21,31 @@
                     <%- item.question %>
 
                 </h3>
-                <div>
-                    <button class="answerA">
-                        A.
-                        <%- item.incorrect_answers[0] %>
-                    </button>
-                    <button class="answerB">
-                        B.
-                        <%- item.incorrect_answers[1] %>
-                    </button>
-                    <button class="answerC">
-                        C.
-                        <%- item.incorrect_answers[2] %>
-                    </button>
-                    <button data-points="unselected" class=answerD>
-                        D.
-                        <%- item.correct_answer %>
-                    </button>
+                <div answer-box>
+                    <div>
+                        <button class="answerA" data-question="<%= index %>"> A.
+                            <%- item.incorrect_answers[0] %>
+                        </button>
+                        <button class="answerB" data-question="<%= index %>">element B.
+                            <%- item.incorrect_answers[1] %>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="answerC" data-question="<%= index %>">
+                            C.
+                            <%- item.incorrect_answers[2] %>
+                        </button>
+                        <button data-points="unselected" class=answerD data-question="<%= index %>">
+                            D.
+                            <%- item.correct_answer %>
+                        </button>
+                    </div>
                 </div>
 
                 <%}) %>
         </div>
         <form action="/score" method="POST">
-            <input id="points" type="hidden" name="scoreInput">
+            <input id="points" type="hidden" name="scoreInput" value="0">
             <button class="getResults" type="submit"> GET RESULTS</button>
         </form>
     </div>

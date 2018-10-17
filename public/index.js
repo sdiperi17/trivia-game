@@ -15,8 +15,6 @@ window.addEventListener("DOMContentLoaded", function() {
 
     var POINTS = document.querySelector("#points");
 
-    console.log(A);
-
     function selectAnswer(arr) {
         arr.forEach(element => {
             element.addEventListener("click", function() {
@@ -27,12 +25,22 @@ window.addEventListener("DOMContentLoaded", function() {
                     element.setAttribute("data-points", "selected");
                     POINTS.setAttribute("value", points);
                     console.log(points);
-                } else {
+                } else if (element.getAttribute("data-points") == "selected") {
                     points -= 1;
                     element.setAttribute("data-points", "unselected");
                     POINTS.setAttribute("value", points);
                     console.log(points);
                 }
+
+                var questionNumber = element.getAttribute("data-question");
+                var questionArr = document.querySelectorAll(
+                    `[data-question="${questionNumber}"]`
+                );
+                questionArr.forEach(question => {
+                    if (question != element) {
+                        question.classList.remove("active");
+                    }
+                });
             });
         });
     }

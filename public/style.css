@@ -139,6 +139,7 @@ header {
     color: white;
     position: absolute;
     width: 100vw;
+    z-index: 100;
 }
 
 .home-page-background {
@@ -147,6 +148,7 @@ header {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    position: fixed;
 }
 
 .play-board {
@@ -169,7 +171,7 @@ header {
     position: fixed;
 }
 
-.box-select {
+.game-select-box {
     background-color: rgba(191, 63, 78, 0.6);
     width: 60vw;
     height: 60vh;
@@ -240,4 +242,8 @@ div button {
 #result-btn {
     border-radius: 20px;
     background: green;
+}
+
+.answer-box {
+    display: flex;
 }
