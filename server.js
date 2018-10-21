@@ -53,10 +53,24 @@ app.get("/score", (req, res) => {
 });
 
 app.post("/score", (req, res) => {
-    req.body.scoreInput;
+    var correctAnswers = req.body.scoreInput;
+    var totalQuestions = req.body.totalQuestions;
+    var grade = Math.floor((correctAnswers / totalQuestions) * 100);
+    var commentForPlayer;
+
+    if (grade >= 80) {
+        commentForPlayer = "Excellent";
+    } else if (grade >= 70) {
+        commentForPlayer = "Good job";
+    } else {
+        commentForPlayer = "Try again";
+    }
 
     // console.log(points);
     res.render("score", {
-        points: req.body.scoreInput
+        points: correctAnswers,
+        totalQuestions,
+        grade,
+        commentForPlayer
     });
 });

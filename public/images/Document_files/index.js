@@ -49,20 +49,4 @@ window.addEventListener("DOMContentLoaded", function() {
     selectAnswer(B);
     selectAnswer(C);
     selectAnswer(D);
-
-    // ----------------------*********-------------------
-    // var getResults = document.querySelector(".getResults");
-
-    // getResults.addEventListener("click", function(saida) {
-    //     saida.preventDefault();
-    //     var totalQuestions = document
-    //         .querySelector("totalQ")
-    //         .getAttribute("value");
-    //     var grade = Math.floor((points / totalQuestions) * 100);
-    //     var elementGrade = document.createElement("h2");
-    //     elementGrade.innerHTML = grade;
-    //     document.querySelector("body").appendChild(elementGrade);
-
-    //     console.log(grade);
-    // });
 });

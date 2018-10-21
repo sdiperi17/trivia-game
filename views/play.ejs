@@ -23,19 +23,19 @@
                 </h3>
                 <div>
                     <div>
-                        <button class="answerA" data-question="<%= index %>"> A.
+                        <button class="answerA answer-btn" data-question="<%= index %>"> A.
                             <%- item.incorrect_answers[0] %>
                         </button>
-                        <button class="answerB" data-question="<%= index %>">element B.
+                        <button class="answerB answer-btn" data-question="<%= index %>">element B.
                             <%- item.incorrect_answers[1] %>
                         </button>
                     </div>
                     <div>
-                        <button class="answerC" data-question="<%= index %>">
+                        <button class="answerC answer-btn" data-question="<%= index %>">
                             C.
                             <%- item.incorrect_answers[2] %>
                         </button>
-                        <button data-points="unselected" class=answerD data-question="<%= index %>">
+                        <button data-points="unselected" class="answerD answer-btn" data-question="<%= index %>">
                             D.
                             <%- item.correct_answer %>
                         </button>
@@ -46,6 +46,7 @@
         </div>
         <form action="/score" method="POST">
             <input id="points" type="hidden" name="scoreInput" value="0">
+            <input id="totalQ" type="hidden" name="totalQuestions" value="<%= data.length %>">
             <button class="getResults" type="submit"> GET RESULTS</button>
         </form>
     </div>
