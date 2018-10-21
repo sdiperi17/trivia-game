@@ -180,7 +180,6 @@ header {
 .game-select-box {
     background-color: rgba(191, 63, 78, 0.6);
     width: 60vw;
-    height: 60vh;
     margin: 10px;
     position: relative;
     top: 20%;
@@ -188,7 +187,6 @@ header {
 }
 
 .label-box {
-    height: 30vh;
     display: block;
     text-align: center;
     padding-top: 50px;
